@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.User;
-import dao.UserDAO;
+import dao.loginDAO;
 
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/Login View")
+public class LoginView extends HttpServlet {
 	private User user;
-	private UserDAO userDAO;
+	private loginDAO userDAO;
 	private static final long serialVersionUID = 1L;
 	private String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=Shop;user=sa;password=root";
 	private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 
-	public LoginServlet() {
+	public LoginView() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 		String userName = request.getParameter("userName");
 		String userPassword = request.getParameter("Password");
 		user = new User();
-		userDAO = new UserDAO();
+		userDAO = new loginDAO();
 		userDAO.setUserName(userName);
 		userDAO.setUserPassword(userPassword);
 
@@ -48,7 +48,7 @@ public class LoginServlet extends HttpServlet {
 					request.getRequestDispatcher("/WelcomeUser.jsp").forward(request, response);
 				} else {
 					// username: 'Khanh'
-					//password: '12345'
+					// password: '12345'
 //					String userDetails = "Invalid Username or Password. Username and Password are case-sensitive.";
 					String userDetails = "Invalid Username or Password.";
 					request.setAttribute("Invalid", userDetails);

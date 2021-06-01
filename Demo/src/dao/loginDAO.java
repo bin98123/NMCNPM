@@ -1,10 +1,10 @@
 package dao;
 
-public class UserDAO {
+public class loginDAO {
 	private int userID;
 	private String userName, userFullName, userPassword;
 
-	public UserDAO(int userID, String userName, String userFullName, String userPassword) {
+	public loginDAO(int userID, String userName, String userFullName, String userPassword) {
 		super();
 		this.userID = userID;
 		this.userName = userName;
@@ -12,7 +12,7 @@ public class UserDAO {
 		this.userPassword = userPassword;
 	}
 
-	public UserDAO() {
+	public loginDAO() {
 
 	}
 

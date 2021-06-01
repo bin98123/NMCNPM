@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Hello World</h1>
-	<form action="LoginServlet" method="post">
+	<form action="Login View" method="post">
 		<table>
 			<tr>
 				<%
@@ -29,7 +29,7 @@
 			<tr>
 				<td width="68%" align="right"><h2>Password:</h2></td>
 				<td><h2>
-						<input type="text" size="32" name="Password"
+						<input type="password" size="32" name="Password"
 							value="${registeredUser.userName}">
 					</h2></td>
 			<tr>
