@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="servlet.LoginView" project="Demo" file="/Demo/src/servlet/LoginView.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="407" y="200"/>    
+    <position height="-1" width="-1" x="407" y="202"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <association id="4">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="5" name="userDAO"/>      
+      <attribute id="5" name="loginDAO"/>      
       <multiplicity id="6" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
