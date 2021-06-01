@@ -17,7 +17,7 @@ import dao.loginDAO;
 @WebServlet("/Login View")
 public class LoginView extends HttpServlet {
 	private User user;
-	private loginDAO userDAO;
+	private loginDAO loginDAO;
 	private static final long serialVersionUID = 1L;
 	private String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=Shop;user=sa;password=root";
 	private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
@@ -33,16 +33,16 @@ public class LoginView extends HttpServlet {
 		String userName = request.getParameter("userName");
 		String userPassword = request.getParameter("Password");
 		user = new User();
-		userDAO = new loginDAO();
-		userDAO.setUserName(userName);
-		userDAO.setUserPassword(userPassword);
+		loginDAO = new loginDAO();
+		loginDAO.setUserName(userName);
+		loginDAO.setUserPassword(userPassword);
 
 		if (userName != null && userPassword != null || userName != "" && userPassword != "") {
 			ok = true;
 		}
 		try {
 			if (ok == true) {
-				boolean login = user.getLogin(userDAO.getUserName(), userDAO.getUserPassword());
+				boolean login = user.getLogin(loginDAO.getUserName(), loginDAO.getUserPassword());
 
 				if (login == true) {
 					request.getRequestDispatcher("/WelcomeUser.jsp").forward(request, response);
