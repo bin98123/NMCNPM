@@ -19,8 +19,13 @@ public class LoginView extends HttpServlet {
 	private User user;
 	private loginDAO loginDAO;
 	private static final long serialVersionUID = 1L;
-	private String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=Shop;user=sa;password=root";
-	private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+//	private String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=Shop;user=sa;password=root";
+	private String connectionUrl = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6418049";
+	private String name = "sql6418049";
+	private String pass = "gV4INX5cWB";
+
+	// private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	private String driver = "com.mysql.jdbc.Driver";
 
 	public LoginView() {
 		super();
