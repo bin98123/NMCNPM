@@ -1,11 +1,11 @@
-package controller;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class User {
+public class ThanhVienDAO {
 //	private String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=Shop;user=sa;password=root";
 	private String connectionUrl = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6418049";
 	private String name = "sql6418049";

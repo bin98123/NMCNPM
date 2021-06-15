@@ -8,16 +8,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import controller.User;
-import dao.loginDAO;
+import dao.ThanhVienDAO;
+import model.QuanLi;
+import model.ThanhVien;
 
 /**
  * Servlet implementation class LoginServlet
  */
 @WebServlet("/Login View")
 public class LoginView extends HttpServlet {
-	private User user;
-	private loginDAO loginDAO;
+	private ThanhVienDAO thanhVienDAO;
+	private ThanhVien thanhVien;
+
+//	private loginDAO loginDAO;
 	private static final long serialVersionUID = 1L;
 //	private String connectionUrl = "jdbc:sqlserver://localhost:1433;" + "databaseName=Shop;user=sa;password=root";
 	private String connectionUrl = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6418049";
@@ -37,23 +40,26 @@ public class LoginView extends HttpServlet {
 		boolean ok = false;
 		String userName = request.getParameter("userName");
 		String userPassword = request.getParameter("Password");
-		user = new User();
-		loginDAO = new loginDAO();
-		loginDAO.setUserName(userName);
-		loginDAO.setUserPassword(userPassword);
+		thanhVienDAO = new ThanhVienDAO();
+//		loginDAO = new loginDAO();
+//		loginDAO.setUserName(userName);
+//		loginDAO.setUserPassword(userPassword);
+		thanhVien = new QuanLi();
+		thanhVien.setUserName(userName);
+		thanhVien.setPassword(userPassword);
 
 		if (userName != null && userPassword != null || userName != "" && userPassword != "") {
 			ok = true;
 		}
 		try {
 			if (ok == true) {
-				boolean login = user.getLogin(loginDAO.getUserName(), loginDAO.getUserPassword());
+				boolean login = thanhVienDAO.getLogin(thanhVien.getUserName(), thanhVien.getPassword());
 
 				if (login == true) {
 					request.getRequestDispatcher("/WelcomeUser.jsp").forward(request, response);
 				} else {
-					// username: 'Khanh'
-					// password: '12345'
+					// username: 'qkhanh'
+					// password: 'passqkhanh'
 //					String userDetails = "Invalid Username or Password. Username and Password are case-sensitive.";
 					String userDetails = "Invalid Username or Password.";
 					request.setAttribute("Invalid", userDetails);
