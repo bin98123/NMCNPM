@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,8 +13,8 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class ManagerServlet
  */
-//@WebServlet("/Manager")
-@WebServlet(urlPatterns = { "/Manager" })
+@WebServlet("/ManagerServlet")
+//@WebServlet(urlPatterns = { "/ManagerServlet" })
 public class ManagerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -43,10 +44,8 @@ public class ManagerServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-//		request.getRequestDispatcher("./login.jsp");
 		session.invalidate();
-//			request.getRequestDispatcher("./index.jsp").forward(request, response);
-		response.sendRedirect("http://localhost:8080/WebProject/user/login.jsp"); // logged-in page
+		request.getRequestDispatcher("/user/login.jsp").forward(request, response);
 
 	}
 }

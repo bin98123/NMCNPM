@@ -192,10 +192,11 @@ li {
 								<!-- 									href="http://localhost:8080/WebProject/user/login.jsp"><i -->
 								<!-- 										class="fa fa-lock"></i>Đăng xuất</a></li> -->
 								<form id="exit"
-									action="http://localhost:8080/WebProject/Manager" method="post">
-									<li onclick="exit.submit();"><input name="home"
-										type="hidden" id="exit-btn" value="exit" /><i
-										class="fa fa-lock"></i>Đăng xuất</a></li>
+									action="http://localhost:8080/WebProject/ManagerServlet"
+									method="post">
+									<li onclick="exit.submit();"><input type="hidden"
+										id="exit-btn" value="exit" /><i class="fa fa-lock"></i><a>Đăng
+											xuất</a></li>
 								</form>
 
 							</ul>
