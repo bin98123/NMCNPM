@@ -1,8 +1,10 @@
+<%@page import="model.NhanVien"%>
 <%@page import="database.CartDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@	page import="beans.User"%>
 <%@ page import="beans.Cart"%>
+<%@ page import="model.ThanhVien"%>
 <%@ page import="beans.CartItem"%>
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
@@ -106,9 +108,15 @@
 	href="http://localhost:8080/WebProject/user/css/login.css">
 <link rel="stylesheet"
 	href="http://localhost:8080/WebProject/user/css/register.css">
+
+<style type="text/css">
+li {
+	cursor: pointer;
+}
+</style>
 </head>
 <%
-	User currentUser = (User) (session.getAttribute("currentSessionUser"));
+	ThanhVien currentUser = (NhanVien) (session.getAttribute("currentSessionUser"));
 %>
 
 
@@ -140,7 +148,22 @@
 									</li>
 								</ul>
 							</div>
-							<p>Xin chào quý khách!</p>
+							<%
+								if (currentUser != null) {
+							%>
+							<p>
+								Xin chào
+								<%=currentUser.getHoVaTen()%>!
+							</p>
+							<%
+								}
+
+							else if (currentUser == null) {
+							%>
+							<p>Xin chào Quý Khách!</p>
+							<%
+								}
+							%>
 						</div>
 					</div>
 
@@ -160,42 +183,27 @@
 						</div>
 					</div>
 					<%
-						} else if (currentUser != null && currentUser.getQuyen().equalsIgnoreCase("user")) {
+						} else if (currentUser != null) {
 					%>
-					<%!public String userName(User currentUser) {
-		String[] output = currentUser.getUsername().split("@");
-		String userName = output[0];
-		return userName;
-	}%>
 					<div class="col-md-8 col-sm-8 col-xs-12">
 						<div class="header-top-right">
 							<ul class="list-inline">
-								<li><a
-									href="http://localhost:8080/WebProject/user/Account.jsp"><i
-										class="fa fa-user"></i><%=userName(currentUser)%> </a></li>
-								<li><a
-									href="http://localhost:8080/WebProject/WishListController"><i
-										class="fa fa-heart"></i>sản phẩm yêu thích</a></li>
+								<!-- 								<li><a onclick="" -->
+								<!-- 									href="http://localhost:8080/WebProject/user/login.jsp"><i -->
+								<!-- 										class="fa fa-lock"></i>Đăng xuất</a></li> -->
+								<form id="exit"
+									action="http://localhost:8080/WebProject/Manager" method="post">
+									<li onclick="exit.submit();"><input name="home"
+										type="hidden" id="exit-btn" value="exit" /><i
+										class="fa fa-lock"></i>Đăng xuất</a></li>
+								</form>
+
 							</ul>
 						</div>
 					</div>
-
-					<%
-						} else if (currentUser != null && currentUser.getQuyen().equalsIgnoreCase("admin")) {
-					%>
-
 					<div class="col-md-8 col-sm-8 col-xs-12">
 						<div class="header-top-right">
 							<ul class="list-inline">
-								<li><a
-									href="http://localhost:8080/WebProject/user/Account.jsp"><i
-										class="fa fa-user"></i><%=userName(currentUser)%> </a></li>
-								<li><a
-									href="http://localhost:8080/WebProject/WishListController"><i
-										class="fa fa-heart"></i>sản phẩm yêu thích</a></li>
-								<li><a
-									href="http://localhost:8080/WebProject/AdminLogin?userID=<%=currentUser.getID()%>&action=loginfromuser"><i
-										class="fas fa-user-cog"></i>Admin</a></li>
 							</ul>
 						</div>
 					</div>
@@ -203,6 +211,14 @@
 					<%
 						}
 					%>
+
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<div class="header-top-right">
+							<ul class="list-inline">
+							</ul>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -246,67 +262,7 @@
 											class="fa fa-cart-arrow-down"></i></a></li>
 									<li class="chart-li"><a
 										href="http://localhost:8080/WebProject/CartController">giỏ
-											hàng</a> <!-- <ul>
-											<li>
-												<div class="header-chart-dropdown">
-													<div class="header-chart-dropdown-list">
-														<div class="dropdown-chart-left floatleft">
-															<a href="#"><img src="img/product/best-product-1.png"
-																alt="list"></a>
-														</div>
-														<div class="dropdown-chart-right">
-															<h2>
-																<a href="#">Feugiat justo lacinia</a>
-															</h2>
-															<h3>Qty: 1</h3>
-															<h4>£80.00</h4>
-														</div>
-													</div>
-													<div class="header-chart-dropdown-list">
-														<div class="dropdown-chart-left floatleft">
-															<a href="#"><img src="img/product/best-product-2.png"
-																alt="list"></a>
-														</div>
-														<div class="dropdown-chart-right">
-															<h2>
-																<a href="#">Aenean eu tristique</a>
-															</h2>
-															<h3>Qty: 1</h3>
-															<h4>£70.00</h4>
-														</div>
-													</div>
-													<div class="chart-checkout">
-														<p>
-															subtotal<span>£150.00</span>
-														</p>
-														<button type="button" class="btn btn-default">Chckout</button>
-													</div>
-												</div>
-											</li>
-										</ul>--></li>
-									<%
-										if (currentUser != null) {
-											ArrayList<CartItem> list;
-											if (session.getAttribute("cart") == null) {
-												Cart cart = new CartDao().getCartByUserID(currentUser.getID());
-												list = cart.getList();
-											} else {
-												Cart cart = (Cart) session.getAttribute("cart");
-												list = cart.getList();
-											}
-									%>
-									<li><a
-										href="http://localhost:8080/WebProject/CartController"><%=list.size() + " sản phẩm"%>
-									</a></li>
-									<%
-										} else {
-									%>
-									<li><a
-										href="http://localhost:8080/WebProject/CartController"> </a></li>
-									<%
-										}
-									%>
-
+											hàng</a>
 								</ul>
 							</div>
 						</div>
@@ -371,7 +327,9 @@
 											href="http://localhost:8080/WebProject/user/404.jsp">Error
 												404</a></li>
 									</ul></li>
-								<li><a href="http://localhost:8080/WebProject/user/contact.jsp">Liên Hệ</a></li>
+								<li><a
+									href="http://localhost:8080/WebProject/user/contact.jsp">Liên
+										Hệ</a></li>
 							</ul>
 						</nav>
 					</div>

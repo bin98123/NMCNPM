@@ -1,6 +1,8 @@
 package database;
 
 import beans.User;
+import model.NhanVien;
+import model.ThanhVien;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,39 +10,74 @@ import java.util.ArrayList;
 public class UserDAO {
 	static Connection currentCon = null;
 	static ResultSet rs = null;
+	static String connectionUrl = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6418049";
+	static String name = "sql6418049";
+	static String pass = "gV4INX5cWB";
+	static String driver = "com.mysql.jdbc.Driver";
 
-	public static User login(User currentUser) throws SQLException {
-		currentCon = Connect.getConnection();
+	// private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+
+	public static boolean login(String userName, String userPassword) {
+		int available = 0;
+		try {
+
+			Class.forName(driver);
+
+			Connection con = DriverManager.getConnection(connectionUrl, name, pass);
+
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery("select TenDangNhap, MatKhau from NhanVien where TenDangNhap='" + userName
+					+ "' and MatKhau='" + userPassword + "'");
+			while (rs.next()) {
+				available++;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Can't running this process!!!");
+		}
+		if (available != 0) {
+			return true;
+		}
+		return false;
+
+	}
+
+	public static NhanVien login(NhanVien currentUser) throws SQLException, ClassNotFoundException {
+//		currentCon = Connect.getConnection();
 //		currentCon = DBCPDataSource.getConnection();
 		// preparing some objects for connection
 
-		String username = currentUser.getUsername();
+		String username = currentUser.getUserName();
 		String password = currentUser.getPassword();
 
 		try {
+			Class.forName(driver);
+
+			Connection con = DriverManager.getConnection(connectionUrl, name, pass);
 			// connect to DB
-			PreparedStatement ps = currentCon
-					.prepareStatement("Select * from users where username = ? and password = ? ");
+			PreparedStatement ps = con
+					.prepareStatement("Select * from NhanVien where TenDangNhap = ? and MatKhau = ? ");
 			ps.setString(1, username);
 			ps.setString(2, password);
 			rs = ps.executeQuery();
 			boolean more = rs.next();
 
 			// if user does not exist set the isValid variable to false
-			if (!more) {
-				currentUser.setValid(false);
-			}
+//			if (!more) {
+//				currentUser.setValid(false);
+//			}
 
 			// if user exists set the isValid variable to true
-			else if (more) {
-				int ID = rs.getInt("ID");
-				String quyen = rs.getString("quyen");
-				currentUser.setID(ID);
-				currentUser.setQuyen(quyen);
-				new CartDao().createNewCartWhenUserDontHave(ID);
-				new WishListDao().createNewWishListIfUserDontHave(ID);
-				new OrderDao().createNewDonHangWhenUserDontHave(ID);
-				currentUser.setValid(true);
+			if (more) {
+//				int ID = rs.getInt("ID");
+//				String quyen = rs.getString("quyen");
+//				currentUser.setID(ID);
+//				currentUser.setQuyen(quyen);
+//				new CartDao().createNewCartWhenUserDontHave(1);
+//				new WishListDao().createNewWishListIfUserDontHave(1);
+//				new OrderDao().createNewDonHangWhenUserDontHave(1);
+				currentUser.setHoVaTen(rs.getString("HoTen"));
+//				currentUser.setValid(true);
 			}
 		}
 
