@@ -1,20 +1,29 @@
 package database;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import beans.Cart;
 import beans.CartItem;
 import beans.Product;
 import beans.User;
+import model.SanPham;
 
 public class CartDao {
 	private Connection conn = null;
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
+	private String connectionUrl = "jdbc:mysql://sql6.freemysqlhosting.net:3306/sql6418049";
+	private String name = "sql6418049";
+	private String pass = "gV4INX5cWB";
+
+	// private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+	private String driver = "com.mysql.jdbc.Driver";
 
 	public CartDao() throws SQLException {
 //		conn = DBCPDataSource.getConnection();
@@ -201,11 +210,45 @@ public class CartDao {
 		return count;
 	}
 
-	public static void main(String[] args) throws SQLException {
+	// Code Nhập hàng
+	public void insertProduct(String maLoaiHang, String donViTinh, SanPham sp) throws ClassNotFoundException {
+//		try {
+		try {
+
+			Class.forName(driver);
+//				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+			Connection con = DriverManager.getConnection(connectionUrl, name, pass);
+
+			// Statement stmt = con.createStatement();
+
+			try (PreparedStatement insert = con.prepareStatement(
+					"insert into MatHang (MaMH,Ten,giamua,giaban,NgaySX,SLnhap,slban,ngaynhap, Malh,Madvt) values (?,?,?,?,?,?,?,?,?,?)")) {
+				insert.setString(1, sp.getIdSanPham());
+				insert.setString(2, sp.getTenSanPham());
+				insert.setDouble(3, sp.getDonGia());
+				insert.setDouble(4, sp.getDonGia() + 20000);
+				insert.setDate(5, null);
+				insert.setDate(6, null);
+				insert.setInt(7, 100);
+				insert.setDate(8, null);
+				insert.setString(9, maLoaiHang);
+				insert.setString(10, donViTinh);
+
+				insert.executeUpdate();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		CartDao cartDao = new CartDao();
 //		Cart cart = cartDao.getCartByUserID(1);
 //		ArrayList<CartItem> list = cart.getList();
 //		System.out.println(list.size());
-		System.out.println(cartDao.countCartItemByCartID(1));
+		SanPham sanPham = new SanPham("sp2", "Quan thoi trang", 12.3, "Good");
+		new CartDao().insertProduct("H2", "USA", sanPham);
+//		System.out.println(cartDao.countCartItemByCartID(1));
 	}
 }

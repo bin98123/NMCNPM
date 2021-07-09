@@ -58,8 +58,8 @@ public class LoginView extends HttpServlet {
 				if (login == true) {
 					request.getRequestDispatcher("/WelcomeUser.jsp").forward(request, response);
 				} else {
-					// username: 'qkhanh'
-					// password: 'passqkhanh'
+					// username: 'bin98123'
+					// password: 'quockhanh'
 //					String userDetails = "Invalid Username or Password. Username and Password are case-sensitive.";
 					String userDetails = "Invalid Username or Password.";
 					request.setAttribute("Invalid", userDetails);

@@ -24,8 +24,8 @@ public class ThanhVienDAO {
 			Connection con = DriverManager.getConnection(connectionUrl, name, pass);
 
 			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery("select TenDangNhap, MaKhau from MatHang where TenDangNhap='" + userName
-					+ "' and MaKhau='" + userPassword + "'");
+			ResultSet rs = stmt.executeQuery("select TenDangNhap, MatKhau from NhanVien where TenDangNhap='" + userName
+					+ "' and MatKhau='" + userPassword + "'");
 			while (rs.next()) {
 				available++;
 			}

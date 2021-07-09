@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import beans.User;
 import beans.VerifyRecaptcha;
-import database.CartDao;
 import database.UserDAO;
+import model.NhanVien;
+import model.ThanhVien;
 
 /**
  * Servlet implementation class LoginServlet
@@ -30,28 +30,29 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, java.io.IOException {
 		response.setContentType("text/html;charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		String gRecaptchaResponse = request
-				.getParameter("g-recaptcha-response");
+		String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
 		boolean verify = VerifyRecaptcha.verify(gRecaptchaResponse);
-		try {
-			User user = new User();
-			user.setUsername(request.getParameter("uname"));
-			user.setPassword(request.getParameter("psw"));
-			user = UserDAO.login(user);
-			if (user.isValid()&& verify) {
-				HttpSession session = request.getSession(true);
+//		User user = new User();
+		NhanVien user = new NhanVien();
+		user.setUserName(request.getParameter("uname"));
+		user.setPassword(request.getParameter("psw"));
+//		user.getUserName()
+		if (UserDAO.login(request.getParameter("uname"), request.getParameter("psw")) == true) {
+			HttpSession session = request.getSession(true);
+			UserDAO dao = new UserDAO();
+			try {
+				user = dao.login(user);
+				System.out.println(user);
 				session.setAttribute("currentSessionUser", user);
 				response.sendRedirect("http://localhost:8080/WebProject/user/index.jsp"); // logged-in page
-			} else {
-				request.setAttribute("err", "wrong username or password");
-				RequestDispatcher rd = request.getRequestDispatcher("/user/login.jsp");
-				rd.include(request, response);
+			} catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("Lỗi kết nối CSDL");
-			request.setAttribute("err", "fail connect CSDL");
-			response.sendRedirect("http://localhost:8080/WebProject/user/login.jsp");
+		} else {
+			request.setAttribute("err", "wrong username or password");
+			RequestDispatcher rd = request.getRequestDispatcher("/user/login.jsp");
+			rd.include(request, response);
 		}
 	}
 }
