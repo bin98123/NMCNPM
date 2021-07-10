@@ -465,7 +465,7 @@
 						<button type="submit"
 							style="border: none; background-color: #36b9cc; border-radius: 6px; margin-right: 10px">Tiếp theo</button>
 						<a
-							href="http://localhost:8080/WebProject/AdminQuanLySanPham?action=exitAdd"><button
+							href="http://localhost:8080/WebProject/admin/SanPham.jsp"><button
 								type="button"
 								style="border: none; background-color: #36b9cc; border-radius: 6px;">Thoát</button></a>
 					</div>

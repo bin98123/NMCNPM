@@ -60,8 +60,41 @@ public ArrayList<SanPham> getListProduct() {
 }
 @Override
 public SanPham getByKey(String key) {
-	// TODO Auto-generated method stub
-	return null;
+	SanPham sanpham =null;
+	try {
+		pstmt = conn.prepareStatement("SELECT * FROM MatHang where MaMH=?");
+		pstmt.setString(1, key);
+		rs = pstmt.executeQuery();
+		while (rs.next()) {
+			String  MaMh = rs.getString("MaMH");
+			String Ten = rs.getString("Ten");
+			double  giamua = rs.getDouble("giamua");
+			double  giaban = rs.getDouble("giaban");
+			int  soluongnhap = rs.getInt("Slnhap");
+			int  soluongban = rs.getInt("slban");
+			String Malh = rs.getString("malh");
+			String Madvt = rs.getString("Madvt");
+			LoaiHang loaiHang=new LoaiHangDao().getByKey(Malh);
+			DonViTinh donViTinh=new DonViTinhDao().getByKey(Madvt);
+			
+			 sanpham = new SanPham(MaMh, Ten, giamua, giaban, soluongnhap, soluongban, loaiHang,donViTinh);
+			
+		}
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		try {
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	return sanpham;
 }
 @Override
 public SanPham getByKeyS(List<String> key) {
@@ -110,12 +143,63 @@ public boolean insert(SanPham key) {
 }
 @Override
 public boolean update(SanPham key) {
-	// TODO Auto-generated method stub
+	String  MaMh = key.getMaMH();
+	String Ten = key.getTenMH();
+	double  giamua = key.getGiaMua();
+	double  giaban = key.getGiaBan();
+	int  soluongnhap = key.getSlNhap();
+	int  soluongban = key.getSlBan();
+	
+	try {
+		pstmt=conn.prepareStatement("update MatHang set Ten=?,giamua=?,giaban=?,SLnhap=?,slban=? where  MaMH=?");
+		
+		pstmt.setString(1, Ten);
+		pstmt.setDouble(2, giamua);
+		pstmt.setDouble(3, giaban);
+		
+		pstmt.setInt(4, soluongnhap);
+		pstmt.setInt(5, soluongban);
+		pstmt.setString(6, MaMh);
+	
+		int a=pstmt.executeUpdate();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally {
+		try {
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	return false;
 }
 @Override
 public boolean delete(SanPham key) {
-	// TODO Auto-generated method stub
+	String id_sanpham = key.getMaMH();
+	try {
+		pstmt = conn.prepareStatement("delete from MatHang where MaMH = ?");
+		pstmt.setString(1, id_sanpham);
+		int row = pstmt.executeUpdate();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		try {
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	return false;
 }
 

@@ -33,8 +33,39 @@ public class QuanLiSanPham extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String sumbit=request.getParameter("sumbit");
+		if(sumbit.equalsIgnoreCase("delete")) {
+			String id=request.getParameter("productID");
+			SanPham sanPham=null;
+			 SanPhamDao sanPhamDao=null;
+			try {
+				sanPhamDao=new SanPhamDao();
+				 sanPham=new SanPhamDao().getByKey(id);
+				
+				 sanPhamDao.delete(sanPham);
+			
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			response.sendRedirect("http://localhost:8080/WebProject/admin/SanPham.jsp");
+			
+		}else if(sumbit.equalsIgnoreCase("edit")) {
+			String id=request.getParameter("productID");
+			SanPham sanPham=null;
+			try {
+				 sanPham=new SanPhamDao().getByKey(id);
+			
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			request.setAttribute("sanpham", sanPham);
+			request.getRequestDispatcher("/admin/SuaSanPham.jsp").forward(request, response);
+		}
+
 	}
 
 	/**
@@ -66,8 +97,35 @@ public class QuanLiSanPham extends HttpServlet {
 		}
 	
 		response.sendRedirect("http://localhost:8080/WebProject/admin/SanPham.jsp");
-	}
-		doGet(request, response);
+	}else if(action.equalsIgnoreCase("edittext")) {
+		String id=request.getParameter("id");
+		
+		String Ten = request.getParameter("productType");
+		String giamua = request.getParameter("thuocnhom");
+		String giaban = request.getParameter("productPrice");
+		String soluongnhap = request.getParameter("tonkho");
+		String soluongban = request.getParameter("description");
+		
+		
+		try {
+			SanPhamDao sanPhamDao=new SanPhamDao();
+			SanPham sanPham=sanPhamDao.getByKey(id);
+			String Malh = sanPham.getLoaihang().getMaLh();
+			String Madvt = sanPham.getDvt().getMaDvt();
+			LoaiHang loaiHang
+			=new LoaiHangDao().getByKey(Malh);
+			DonViTinh donViTinh=new DonViTinhDao().getByKey(Madvt);
+			SanPham sanPham2=new SanPham(id, Ten, Double.parseDouble(giamua),  Double.parseDouble(giaban),Integer.parseInt(soluongnhap) ,Integer.parseInt(soluongban), loaiHang, donViTinh);
+			sanPhamDao.update(sanPham2);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		response.sendRedirect("http://localhost:8080/WebProject/admin/SanPham.jsp");
 	}
 
-}
+			
+	
+	}
+	}
