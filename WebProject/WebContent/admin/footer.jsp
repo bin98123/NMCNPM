@@ -90,15 +90,6 @@
 								</div>
 								<div class="contanct-details">
 									<div class="info-icon">
-										<i class="fa fa-envelope-o"></i>
-									</div>
-									<div class="info-content">
-										<p>Hoanghiep@gamil.com</p>
-										<p>hienbabycute@gamil.com</p>
-									</div>
-								</div>
-								<div class="contanct-details">
-									<div class="info-icon">
 										<i class="fa fa-map-marker"></i>
 									</div>
 									<div class="info-content">

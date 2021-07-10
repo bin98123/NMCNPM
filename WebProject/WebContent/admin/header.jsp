@@ -174,10 +174,10 @@ li {
 						<div class="header-top-right">
 							<ul class="list-inline">
 								<li><a
-									href="http://localhost:8080/WebProject/user/login.jsp"><i
+									href="http://localhost:8080/WebProject/admin/login.jsp"><i
 										class="fa fa-lock"></i>Đăng nhập</a></li>
 								<li><a
-									href="http://localhost:8080/WebProject/user/register.jsp"><i
+									href="http://localhost:8080/WebProject/admin/register.jsp"><i
 										class="fa fa-pencil-square-o"></i>Đăng kí</a></li>
 							</ul>
 						</div>
