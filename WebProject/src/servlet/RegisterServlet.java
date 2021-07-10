@@ -33,23 +33,23 @@ public class RegisterServlet extends HttpServlet {
 					user.setPassword(request.getParameter("psw"));
 					user = UserDAO.register(user);
 					if (user.isValid() == false) {
-						response.sendRedirect("http://localhost:8080/WebProject/user/login.jsp");
+						response.sendRedirect("http://localhost:8080/WebProject/admin/login.jsp");
 					} else {
 						request.setAttribute("err", "this username has already used");
-						request.getRequestDispatcher("/user/register.jsp").forward(request, response);
+						request.getRequestDispatcher("/admin/register.jsp").forward(request, response);
 					}
 				} else {
 					request.setAttribute("err", "That password doesn't match. Try again");
-					request.getRequestDispatcher("/user/register.jsp").forward(request, response);
+					request.getRequestDispatcher("/admin/register.jsp").forward(request, response);
 				}
 			}
 			catch (Throwable theException) {
-				response.sendRedirect("http://localhost:8080/WebProject/user/404.jsp"); // error page
+				response.sendRedirect("http://localhost:8080/WebProject/admin/404.jsp"); // error page
 				System.out.println(theException);
 			}
 		} else {
 			request.setAttribute("err", "invalid email");
-			request.getRequestDispatcher("/user/register.jsp").forward(request, response);
+			request.getRequestDispatcher("/admin/register.jsp").forward(request, response);
 		}
 	}
 }
