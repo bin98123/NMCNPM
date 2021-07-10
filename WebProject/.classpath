@@ -9,6 +9,8 @@
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/javax.servlet-3.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/recaptcha4j-0.0.7.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/sqljdbc42.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jasper-6.0.29.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-15">
 		<attributes>
 			<attribute name="module" value="true"/>
