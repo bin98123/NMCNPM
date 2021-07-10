@@ -87,7 +87,7 @@
 										<p>+1 (00) 86 868 868 666</p>
 										<p>+1 (00) 42 868 666 888</p>
 									</div>
-								</div>
+									</div>
 								<div class="contanct-details">
 									<div class="info-icon">
 										<i class="fa fa-map-marker"></i>
