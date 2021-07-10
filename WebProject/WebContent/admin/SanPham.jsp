@@ -417,10 +417,12 @@
 									tất cả</span>
 							</button>
 							<button
-								style="border: none; border-radius: 6px; padding: 8px; background-color: #1cc88a;">
+								style="border: none; border-radius: 6px; padding: 8px; background-color: #1cc88a;" 
+								onclick="window.location.href='/WebProject/QuanLiSanPham?sumbit=import'">
 								<i class="fas fa-file-upload" style="margin-right: 5px"></i> <span>Import
 									to Excel</span>
 							</button>
+							
 						</div>
 						<div style="display: flex; padding: 5px 19px">
 							<button
@@ -431,6 +433,7 @@
 								style="padding: 8px 15px; border: 1px solid black; border-right: 1px solid #fff; background-color: #fff;">Excel</button>
 							<button
 								style="padding: 8px 15px; border: 1px solid black; background-color: #fff;">Print</button>
+							
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">

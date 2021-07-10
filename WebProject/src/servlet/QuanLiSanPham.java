@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import ImportFileEX.ExcelProduct;
 import dao.DonViTinhDao;
 import dao.LoaiHangDao;
 import dao.SanPhamDao;
@@ -75,6 +76,23 @@ public class QuanLiSanPham extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			
+			request.getRequestDispatcher("/admin/SanPham.jsp").forward(request, response);
+		}else if(sumbit.equalsIgnoreCase("import")) {
+			
+			
+			try {
+				ExcelProduct excelProduct=new ExcelProduct();
+				
+				excelProduct.InsertByExcel();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
 			
 			
 			request.getRequestDispatcher("/admin/SanPham.jsp").forward(request, response);
