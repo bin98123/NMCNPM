@@ -127,7 +127,7 @@ public static void main(String[] args) throws SQLException {
 //	}
 	DonViTinh donViTinh=new DonViTinhDao().getByKey("VN");
 	LoaiHang lh=new LoaiHangDao().getByKey("H1");
-SanPham pham=new SanPham("sp3", "váy thời trang", 1.2, 2.2, 40, 30, lh, donViTinh);
+SanPham pham=new SanPham("sp66", "váy thời trang", 1.2, 2.2, 40, 30, lh, donViTinh);
 dao.insert(pham);
 }
 }
