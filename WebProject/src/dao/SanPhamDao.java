@@ -202,7 +202,25 @@ public boolean delete(SanPham key) {
 	}
 	return false;
 }
-
+public void deleteAllProduct() {
+	try {
+		pstmt = conn.prepareStatement("delete from MatHang");
+		pstmt.executeUpdate();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	} finally {
+		try {
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}
 public static void main(String[] args) throws SQLException {
 	SanPhamDao dao=new SanPhamDao();
 //	ArrayList<SanPham> list=dao.getListProduct();

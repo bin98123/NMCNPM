@@ -64,6 +64,20 @@ public class QuanLiSanPham extends HttpServlet {
 			
 			request.setAttribute("sanpham", sanPham);
 			request.getRequestDispatcher("/admin/SuaSanPham.jsp").forward(request, response);
+		}else if(sumbit.equalsIgnoreCase("deleteall")) {
+			
+			
+			try {
+				 SanPhamDao sanPhamDao=new SanPhamDao();
+				 sanPhamDao.deleteAllProduct();
+			
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
+			request.getRequestDispatcher("/admin/SanPham.jsp").forward(request, response);
 		}
 
 	}

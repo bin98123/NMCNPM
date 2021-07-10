@@ -411,7 +411,7 @@
 									</span>
 								</button>
 							</a>
-							<button
+							<button onclick="deleteAll()" 
 								style="border: none; border-radius: 6px; padding: 8px; margin-right: 15px; background-color: #e74a3b;">
 								<i class="fas fa-trash" style="margin-right: 5px"></i> <span>Xóa
 									tất cả</span>
@@ -567,5 +567,14 @@
 			});
 		});
 	</script>
+	<script type="text/javascript">
+	function deleteAll() {
+		let r = confirm("Bạn có chắc chắn sử dụng hành động này");
+		if (r == true) {
+			
+			window.location.href=("/WebProject/QuanLiSanPham?sumbit=deleteall");
+		}
+	}
+</script>
 </body>
 </html>
