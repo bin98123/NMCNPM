@@ -401,8 +401,8 @@
 					<div class="card shadow mb-4">
 						<div
 							style="display: flex; justify-content: flex-end; text-align: right; padding: 10px 19px">
-							<a href="ThemSanPham.html">
-								<button
+							<a href="http://localhost:8080/WebProject/admin/ThemSanPham.jsp">
+								<button 
 									style="border: none; border-radius: 6px; padding: 8px; margin-right: 15px; background-color: #4e73df;">
 									<i class="fas fa-plus" style="margin-right: 3px"></i> <span>Thêm
 									</span>
@@ -435,11 +435,15 @@
 									cellspacing="0">
 									<thead>
 										<tr>
-											<th>STT</th>
-											<th>Danh mục</th>
-											<th>Tiêu đề</th>
-											<th style="text-align: center;">Ảnh</th>
-											<th style="text-align: center;">Hiển thị</th>
+											<th>MaMh</th>
+											<th>TenMH</th>
+											<th>giá mua</th>
+											<th>giá bán</th>
+											<th>SLNhập</th>
+											<th>SLBán</th>
+											<th>MaLH</th>
+											<th>Madvt</th>
+											
 											<th>Xóa</th>
 											<th>Sửa</th>
 										</tr>
@@ -450,6 +454,12 @@
 											<tr>
 												<td>${items.getMaMH() }</td>
 												<td>${items.getTenMH() }</td>
+												<td>${items.getGiaMua() }</td>
+												<td>${items.getGiaBan() }</td>
+												<td>${items.getSlNhap() }</td>
+												<td>${items.getSlBan() }</td>
+												<td>${items.getLoaihang().getMaLh() }</td>
+												<td>${items.getDvt().getMaDvt() }</td>
 											</tr>
 										</c:forEach>
 
@@ -525,6 +535,15 @@
 
 	<!-- Page level custom scripts -->
 	<script src="js/demo/datatables-demo.js"></script>
-
+<script type="text/javascript">
+		$(document).ready(function() {
+			$('#"dataTable"').DataTable({
+				"bInfo" : false,
+				"scrollY" : "300px",
+				"scrollCollapse" : false,
+				"paging" : false
+			});
+		});
+	</script>
 </body>
 </html>

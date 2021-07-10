@@ -70,7 +70,42 @@ public SanPham getByKeyS(List<String> key) {
 }
 @Override
 public boolean insert(SanPham key) {
-	// TODO Auto-generated method stub
+	String  MaMh = key.getMaMH();
+	String Ten = key.getTenMH();
+	double  giamua = key.getGiaMua();
+	double  giaban = key.getGiaBan();
+	int  soluongnhap = key.getSlNhap();
+	int  soluongban = key.getSlBan();
+	String Malh = key.getLoaihang().getMaLh();
+	String Madvt = key.getDvt().getMaDvt();
+	try {
+		pstmt=conn.prepareStatement("insert into MatHang values(?,?,?,?,?,?,?,?,?,?)");
+		pstmt.setString(1, MaMh);
+		pstmt.setString(2, Ten);
+		pstmt.setDouble(3, giamua);
+		pstmt.setDouble(4, giaban);
+		pstmt.setDate(5,null);
+		pstmt.setInt(6, soluongnhap);
+		pstmt.setInt(7, soluongban);
+		pstmt.setDate(8,null);
+		pstmt.setString(9, Malh);
+		pstmt.setString(10, Madvt);
+		int a=pstmt.executeUpdate();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally {
+		try {
+			if (pstmt != null) {
+				pstmt.close();
+			}
+			if (rs != null) {
+				rs.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 	return false;
 }
 @Override
@@ -86,9 +121,13 @@ public boolean delete(SanPham key) {
 
 public static void main(String[] args) throws SQLException {
 	SanPhamDao dao=new SanPhamDao();
-	ArrayList<SanPham> list=dao.getListProduct();
-	for (SanPham sanPham : list) {
-		System.out.println(sanPham);
-	}
+//	ArrayList<SanPham> list=dao.getListProduct();
+//	for (SanPham sanPham : list) {
+//		System.out.println(sanPham);
+//	}
+	DonViTinh donViTinh=new DonViTinhDao().getByKey("VN");
+	LoaiHang lh=new LoaiHangDao().getByKey("H1");
+SanPham pham=new SanPham("sp3", "váy thời trang", 1.2, 2.2, 40, 30, lh, donViTinh);
+dao.insert(pham);
 }
 }
