@@ -4,9 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
+import model.DonViTinh;
 import model.LoaiHang;
+import model.SanPham;
 
 
 public class LoaiHangDao implements IDAO<LoaiHang> {
@@ -65,6 +68,33 @@ public class LoaiHangDao implements IDAO<LoaiHang> {
 	public LoaiHang getByKeyS(List<String> key) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	public ArrayList<String> getListMalh() {
+		ArrayList<String> listMaLh = new ArrayList<String>();
+		
+		try {
+			pstmt = conn.prepareStatement("SELECT * FROM LoaiHang");
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				String  MaLh = rs.getString("MaLH");
+				
+				listMaLh.add(MaLh);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) {
+					pstmt.close();
+				}
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return listMaLh;
 	}
 public static void main(String[] args) throws SQLException {
 	LoaiHangDao hangDao=new LoaiHangDao();

@@ -137,18 +137,17 @@ public class QuanLiSanPham extends HttpServlet {
 		String giaban = request.getParameter("productPrice");
 		String soluongnhap = request.getParameter("tonkho");
 		String soluongban = request.getParameter("description");
+		String Malh = request.getParameter("malh");
+		String Madvt = request.getParameter("madvt");
 		
 		
 		try {
-			SanPhamDao sanPhamDao=new SanPhamDao();
-			SanPham sanPham=sanPhamDao.getByKey(id);
-			String Malh = sanPham.getLoaihang().getMaLh();
-			String Madvt = sanPham.getDvt().getMaDvt();
 			LoaiHang loaiHang
 			=new LoaiHangDao().getByKey(Malh);
 			DonViTinh donViTinh=new DonViTinhDao().getByKey(Madvt);
-			SanPham sanPham2=new SanPham(id, Ten, Double.parseDouble(giamua),  Double.parseDouble(giaban),Integer.parseInt(soluongnhap) ,Integer.parseInt(soluongban), loaiHang, donViTinh);
-			sanPhamDao.update(sanPham2);
+			SanPham sanPham=new SanPham(id, Ten, Double.parseDouble(giamua),  Double.parseDouble(giaban),Integer.parseInt(soluongnhap) ,Integer.parseInt(soluongban), loaiHang, donViTinh);
+			SanPhamDao sanPhamDao=new SanPhamDao();
+			sanPhamDao.update(sanPham);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

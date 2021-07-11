@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import model.DonViTinh;
@@ -63,5 +64,31 @@ public class DonViTinhDao implements IDAO<DonViTinh> {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
+	public ArrayList<String> getListMadvt() {
+		ArrayList<String> listdvt = new ArrayList<String>();
+		
+		try {
+			pstmt = conn.prepareStatement("SELECT * FROM DonViTinh");
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				String  Madvt = rs.getString("MaDvt");
+				
+				listdvt.add(Madvt);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) {
+					pstmt.close();
+				}
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return listdvt;
+	}	
 }

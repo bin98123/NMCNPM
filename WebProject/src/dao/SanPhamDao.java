@@ -149,9 +149,11 @@ public boolean update(SanPham key) {
 	double  giaban = key.getGiaBan();
 	int  soluongnhap = key.getSlNhap();
 	int  soluongban = key.getSlBan();
+	String Malh = key.getLoaihang().getMaLh();
+	String Madvt = key.getDvt().getMaDvt();
 	
 	try {
-		pstmt=conn.prepareStatement("update MatHang set Ten=?,giamua=?,giaban=?,SLnhap=?,slban=? where  MaMH=?");
+		pstmt=conn.prepareStatement("update MatHang set Ten=?,giamua=?,giaban=?,SLnhap=?,slban=?,Malh=?,Madvt=? where  MaMH=?");
 		
 		pstmt.setString(1, Ten);
 		pstmt.setDouble(2, giamua);
@@ -159,7 +161,9 @@ public boolean update(SanPham key) {
 		
 		pstmt.setInt(4, soluongnhap);
 		pstmt.setInt(5, soluongban);
-		pstmt.setString(6, MaMh);
+		pstmt.setString(6, Malh);
+		pstmt.setString(7, Madvt);
+		pstmt.setString(8, MaMh);
 	
 		int a=pstmt.executeUpdate();
 	} catch (SQLException e) {

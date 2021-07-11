@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<jsp:useBean id="loaihang" scope="request" class="dao.LoaiHangDao"></jsp:useBean>
+<jsp:useBean id="donvitinh" scope="request" class="dao.DonViTinhDao"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
@@ -446,16 +448,21 @@
 					</div>
 					<hr>
 					<div>
-						<span style="padding-right: 125px;">Mã Loai Hàng:</span> <input
-							type="text" style="width: 600px; padding: 3px" name="malh"
-							required="required">
+						<span style="padding-right: 125px;">Mã Loai Hàng:</span><select name="malh" style="width: 600px; padding: 3px">
+											<c:forEach var="i" begin="0" end="${loaihang.getListMalh().size()-1}">
+												<option value="${loaihang.getListMalh().get(i)}">${loaihang.getListMalh().get(i)}</option>
+											</c:forEach>
+										</select>
 					</div>
 					<hr>
-					<div>
-						<span style="padding-right: 125px;">Mã Đơn Vị Tính:</span> <input
-							type="text" style="width: 600px; padding: 3px" name="madvt"
-							required="required">
+					 <div>
+						<span style="padding-right: 125px;">Mã Đơn Vị Tính:</span> <select name="madvt" style="width: 600px; padding: 3px">
+											<c:forEach var="i" begin="0" end="${donvitinh.getListMadvt().size()-1}">
+												<option value="${donvitinh.getListMadvt().get(i)}">${donvitinh.getListMadvt().get(i)}</option>
+											</c:forEach>
+										</select>
 					</div>
+				
 				</div>
 
 			</div>
