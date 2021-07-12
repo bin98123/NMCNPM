@@ -15,7 +15,7 @@
 <title>SanPham</title>
 <!-- Custom fonts for this template-->
 <link
-	href="http://localhost:8080/WebProject/admin/vendor/fontawesome-free/css/all.min.css"
+	href="/admin/vendor/fontawesome-free/css/all.min.css"
 	rel="stylesheet" type="text/css">
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -23,11 +23,11 @@
 
 <!-- Custom styles for this template-->
 <link
-	href="http://localhost:8080/WebProject/admin/css/sb-admin-2.min.css"
+	href="/admin/css/sb-admin-2.min.css"
 	rel="stylesheet">
 <!-- Custom styles for this page -->
 <link
-	href="http://localhost:8080/WebProject/admin/vendor/datatables/dataTables.bootstrap4.min.css"
+	href="/admin/vendor/datatables/dataTables.bootstrap4.min.css"
 	rel="stylesheet">
 </head>
 <body id="page-top">
@@ -404,7 +404,7 @@
 					<div class="card shadow mb-4">
 						<div
 							style="display: flex; justify-content: flex-end; text-align: right; padding: 10px 19px">
-							<a href="http://localhost:8080/WebProject/admin/ThemSanPham.jsp">
+							<a href="/admin/ThemSanPham.jsp">
 								<button 
 									style="border: none; border-radius: 6px; padding: 8px; margin-right: 15px; background-color: #4e73df;">
 									<i class="fas fa-plus" style="margin-right: 3px"></i> <span>Thêm
@@ -418,7 +418,7 @@
 							</button>
 							<button
 								style="border: none; border-radius: 6px; padding: 8px; background-color: #1cc88a;" 
-								onclick="window.location.href='/WebProject/QuanLiSanPham?sumbit=import'">
+								onclick="window.location.href='/QuanLiSanPham?sumbit=import'">
 								<i class="fas fa-file-upload" style="margin-right: 5px"></i> <span>Import
 									to Excel</span>
 							</button>
@@ -467,13 +467,13 @@
 												<td>${items.getLoaihang().getMaLh() }</td>
 												<td>${items.getDvt().getMaDvt() }</td>
 												<td style="text-align: center; line-height: inherit;"><button type="button"
-												onclick="window.location.href='/WebProject/QuanLiSanPham?sumbit=delete&productID=${ items.getMaMH()}'">
+												onclick="window.location.href='/QuanLiSanPham?sumbit=delete&productID=${ items.getMaMH()}'">
 												<i class="fas fa-trash-alt"></i>
 											</button></td>
 									
 
 							<td style="text-align: center; line-height: inherit;"><button type="button"
-												onclick="window.location.href='/WebProject/QuanLiSanPham?sumbit=edit&productID=${ items.getMaMH()}'">
+												onclick="window.location.href='/QuanLiSanPham?sumbit=edit&productID=${ items.getMaMH()}'">
 												<i class="fas fa-tools">
 											</button></td>
 							
@@ -539,25 +539,25 @@
 
 	<!-- Bootstrap core JavaScript-->
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/jquery/jquery.min.js"></script>
+		src="/admin/vendor/jquery/jquery.min.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Core plugin JavaScript-->
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+		src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 	<!-- Custom scripts for all pages-->
 	<script
-		src="http://localhost:8080/WebProject/admin/js/sb-admin-2.min.js"></script>
+		src="/admin/js/sb-admin-2.min.js"></script>
 
 	<!-- Page level plugins -->
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/chart.js/Chart.min.js"></script>
+		src="/admin/vendor/chart.js/Chart.min.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+		src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+		src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 	<!-- Page level custom scripts -->
 	<script src="js/demo/datatables-demo.js"></script>
 <script type="text/javascript">
@@ -575,7 +575,7 @@
 		let r = confirm("Bạn có chắc chắn sử dụng hành động này");
 		if (r == true) {
 			
-			window.location.href=("/WebProject/QuanLiSanPham?sumbit=deleteall");
+			window.location.href=("/QuanLiSanPham?sumbit=deleteall");
 		}
 	}
 </script>

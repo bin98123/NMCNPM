@@ -395,7 +395,7 @@
 					<h1 class="h3 mb-4 text-gray-800"></h1>
 					<div class="col-lg-6 mb-4">
 
-								<form action="http://localhost:8080/WebProject/QuanLiSanPham?action=continue"
+								<form action="/QuanLiSanPham?action=continue"
 			method="post">
 			<!-- Illustrations -->
 			<div class="card shadow mb-4" style="width: 205%;">
@@ -472,7 +472,7 @@
 						<button type="submit"
 							style="border: none; background-color: #36b9cc; border-radius: 6px; margin-right: 10px">Tiếp theo</button>
 						<a
-							href="http://localhost:8080/WebProject/admin/SanPham.jsp"><button
+							href="/admin/SanPham.jsp"><button
 								type="button"
 								style="border: none; background-color: #36b9cc; border-radius: 6px;">Thoát</button></a>
 					</div>

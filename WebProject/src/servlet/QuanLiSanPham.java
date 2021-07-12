@@ -50,7 +50,7 @@ public class QuanLiSanPham extends HttpServlet {
 				e.printStackTrace();
 			}
 			
-			response.sendRedirect("http://localhost:8080/WebProject/admin/SanPham.jsp");
+			response.sendRedirect("/admin/SanPham.jsp");
 			
 		}else if(sumbit.equalsIgnoreCase("edit")) {
 			String id=request.getParameter("productID");
@@ -128,7 +128,7 @@ public class QuanLiSanPham extends HttpServlet {
 			e.printStackTrace();
 		}
 	
-		response.sendRedirect("http://localhost:8080/WebProject/admin/SanPham.jsp");
+		response.sendRedirect("/admin/SanPham.jsp");
 	}else if(action.equalsIgnoreCase("edittext")) {
 		String id=request.getParameter("id");
 		
@@ -153,7 +153,7 @@ public class QuanLiSanPham extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		response.sendRedirect("http://localhost:8080/WebProject/admin/SanPham.jsp");
+		response.sendRedirect("/admin/SanPham.jsp");
 	}
 
 			

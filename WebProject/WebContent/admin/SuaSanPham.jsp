@@ -16,7 +16,7 @@
 <title>sưa san pham</title>
 <!-- Custom fonts for this template-->
 <link
-	href="http://localhost:8080/WebProject/admin/vendor/fontawesome-free/css/all.min.css"
+	href="/admin/vendor/fontawesome-free/css/all.min.css"
 	rel="stylesheet" type="text/css">
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -24,11 +24,11 @@
 
 <!-- Custom styles for this template-->
 <link
-	href="http://localhost:8080/WebProject/admin/css/sb-admin-2.min.css"
+	href="/admin/css/sb-admin-2.min.css"
 	rel="stylesheet">
 <!-- Custom styles for this page -->
 <link
-	href="http://localhost:8080/WebProject/admin/vendor/datatables/dataTables.bootstrap4.min.css"
+	href="/admin/vendor/datatables/dataTables.bootstrap4.min.css"
 	rel="stylesheet">
 </head>
 <body id="page-top">
@@ -399,7 +399,7 @@
 					<h1 class="h3 mb-4 text-gray-800"></h1>
 					<div class="col-lg-6 mb-4">
 
-								<form action="http://localhost:8080/WebProject/QuanLiSanPham?action=edittext&id=${ sanpham.getMaMH()}"
+								<form action="/QuanLiSanPham?action=edittext&id=${ sanpham.getMaMH()}"
 			method="Post">
 			<!-- Illustrations -->
 			<div class="card shadow mb-4" style="width: 205%;">
@@ -475,7 +475,7 @@
 						<button type="submit"
 							style="border: none; background-color: #36b9cc; border-radius: 6px; margin-right: 10px">Tiếp theo</button>
 						<a
-							href="http://localhost:8080/WebProject/admin/SanPham.jsp"><button
+							href="/admin/SanPham.jsp"><button
 								type="button"
 								style="border: none; background-color: #36b9cc; border-radius: 6px;">Thoát</button></a>
 					</div>
@@ -536,35 +536,35 @@
 
 	<!-- Bootstrap core JavaScript-->
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/jquery/jquery.min.js"></script>
+		src="/admin/vendor/jquery/jquery.min.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Core plugin JavaScript-->
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+		src="/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 	<!-- Custom scripts for all pages-->
 	<script
-		src="http://localhost:8080/WebProject/admin/js/sb-admin-2.min.js"></script>
+		src="/admin/js/sb-admin-2.min.js"></script>
 
 	<!-- Page level plugins -->
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/chart.js/Chart.min.js"></script>
+		src="/admin/vendor/chart.js/Chart.min.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/datatables/jquery.dataTables.min.js"></script>
+		src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+		src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 	<!-- Page level custom scripts -->
 	<script
-		src="http://localhost:8080/WebProject/admin/js/demo/chart-area-demo.js"></script>
+		src="/admin/js/demo/chart-area-demo.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/js/demo/chart-pie-demo.js"></script>
+		src="/admin/js/demo/chart-pie-demo.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/js/demo/chart-bar-demo.js"></script>
+		src="/admin/js/demo/chart-bar-demo.js"></script>
 	<script
-		src="http://localhost:8080/WebProject/admin/js/demo/datatables-demo.js"></script>
+		src="/admin/js/demo/datatables-demo.js"></script>
 
 </body>
 </html>
