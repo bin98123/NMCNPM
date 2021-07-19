@@ -6,7 +6,7 @@
 <%-- <%@ page import="beans.Cart"%> --%>
 <%@ page import="model.ThanhVien"%>
 <%-- <%@ page import="beans.CartItem"%> --%>
-<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
 
