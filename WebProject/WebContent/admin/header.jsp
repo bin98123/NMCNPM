@@ -281,11 +281,10 @@ li {
 						<nav>
 							<ul>
 								<li><a
-									href="http://localhost:8080/WebProject/user/index.jsp">Trang
+									href="http://localhost:8080/WebProject/admin/index.jsp">Trang
 										Chủ</a></li>
 								<li><a
-									href="http://localhost:8080/WebProject/user/shop.jsp">Cửa
-										Hàng</a></li>
+									href="http://localhost:8080/WebProject/admin/SanPham.jsp">Sản Phẩm</a></li>
 								<li><a
 									href="http://localhost:8080/WebProject/ProductDemoServlet?productType=aokhoacnam&nhom=men&index=1">Đồ
 										Nam</a></li>
@@ -308,8 +307,7 @@ li {
 								<li><a href="#">Trang</a>
 									<ul class="sub-menu">
 										<li><a
-											href="http://localhost:8080/WebProject/user/shop.jsp">Cửa
-												Hàng</a></li>
+											href="http://localhost:8080/WebProject/admin/SanPham.jsp">Sản Phẩm</a></li>
 										<li><a
 											href="http://localhost:8080/WebProject/user/men.jsp">Đồ
 												Nam</a></li>
