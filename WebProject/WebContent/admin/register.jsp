@@ -20,8 +20,8 @@
 			<p>Làm ơn điền vào mục dưới đây để tạo tài khoản</p>
 			<hr>
 
-			<label for="email"><b>Email</b></label> <input type="text"
-				placeholder="Nhập Email" name="email" id="email" required> <label
+			<label for="user"><b>Tài khoản</b></label> <input type="text"
+				placeholder="Nhập tài khoản" name="user" id="email" required> <label
 				for="psw"><b>Mật khẩu</b></label> <input type="password"
 				placeholder="Nhập mật khẩu" name="psw" id="psw" required> <label
 				for="psw-repeat"><b>Nhập lại mật khẩu</b></label> <input
@@ -36,9 +36,9 @@
 			%>
 			<span style="color: red">Mật khẩu đó không khớp. Hãy thử lại</span>
 			<%
-				} else if (err != null && err.equalsIgnoreCase("invalid email")) {
+				} else if (err != null && err.equalsIgnoreCase("invalid username")) {
 			%>
-			<span style="color: red">Email không hợp lệ</span>
+			<span style="color: red">Tên tài khoản không hợp lệ</span>
 			<%
 				}
 			%>

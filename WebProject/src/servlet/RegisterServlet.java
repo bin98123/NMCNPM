@@ -6,6 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.ThanhVienDAO;
+import model.NhanVien;
+import model.ThanhVien;
+
 //import beans.User;
 //import database.UserDAO;
 
@@ -22,17 +26,18 @@ public class RegisterServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, java.io.IOException {
-		String email = request.getParameter("email");
+		String user = request.getParameter("user");
 		String psw = request.getParameter("psw");
 		String pswrepeat = request.getParameter("psw-repeat");
-		if (email.contains("@") && !email.startsWith("@") && email.length() > 6) {
+		if (user.length() > 6) {
 			try {
-				User user = new User();
+				ThanhVien thanhVien = new NhanVien();
+//				User user = new User();
+				ThanhVienDAO thanhVienDAO = new ThanhVienDAO();
 				if (psw.equals(pswrepeat)) {
-					user.setUsername(request.getParameter("email"));
-					user.setPassword(request.getParameter("psw"));
-					user = UserDAO.register(user);
-					if (user.isValid() == false) {
+					thanhVien.setUserName(request.getParameter("user"));
+					thanhVien.setPassword(request.getParameter("psw"));
+					if (thanhVienDAO.register(user, psw) > 0) {
 						response.sendRedirect("http://localhost:8080/WebProject/admin/login.jsp");
 					} else {
 						request.setAttribute("err", "this username has already used");
@@ -42,13 +47,12 @@ public class RegisterServlet extends HttpServlet {
 					request.setAttribute("err", "That password doesn't match. Try again");
 					request.getRequestDispatcher("/admin/register.jsp").forward(request, response);
 				}
-			}
-			catch (Throwable theException) {
+			} catch (Throwable theException) {
 				response.sendRedirect("http://localhost:8080/WebProject/admin/404.jsp"); // error page
 				System.out.println(theException);
 			}
 		} else {
-			request.setAttribute("err", "invalid email");
+			request.setAttribute("err", "invalid username");
 			request.getRequestDispatcher("/admin/register.jsp").forward(request, response);
 		}
 	}
