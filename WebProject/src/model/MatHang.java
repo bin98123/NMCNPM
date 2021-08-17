@@ -102,6 +102,15 @@ public class MatHang {
 	public void setNgayNhap(String ngayNhap) {
 		this.ngayNhap = ngayNhap;
 	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "MatHang [maMH=" + maMH + ", tenMH=" + tenMH + ", giaMua=" + giaMua + ", giaBan=" + giaBan + ", slNhap="
+				+ slNhap + ", slBan=" + slBan + ", ngayNhap=" + ngayNhap + ", ngaySX=" + ngaySX + "]";
+	}
 	
 	
 }

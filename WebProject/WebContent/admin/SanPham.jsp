@@ -82,7 +82,7 @@
 
 			<!-- Nav Item - Dashboard -->
 			<li class="nav-item"><h6 class="nav-link">Quản lí Trang
-					Chính</h6> <a class="nav-link" href="index.html"> <i
+					Chính</h6> <a class="nav-link" href="Thongkesanpham.jsp"> <i
 					class="fas fa-home"></i> <span>Thống Kê</span>
 			</a></li>
 

@@ -1,7 +1,9 @@
-
+<%@page import="dao.SanPhamDao"%>
+<%@page import="model.MatHang"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +22,10 @@
 		<h1>Thống Kê sản phẩm</h1>
 		<hr>
 	</div>
+	<% SanPhamDao dao = new SanPhamDao();
+	ArrayList<MatHang> listSanPham = dao.getListProductStatistical();
+	request.setAttribute("list", listSanPham);
+	%>
 	<form
 		action="http://localhost:8080/WebProject/ThongKeHoiDap?action=thongke"
 		method="post">
@@ -53,6 +59,7 @@
 						</tr>
 					</thead>
 						<c:forEach items="${list}" var="li">
+						<tr>
 								<td>${li.maMH}</td>
 								<td>${li.tenMH}</td>
 								<td>${li.giaMua}</td>
@@ -61,6 +68,7 @@
 								<td>${li.slNhap}</td>
 								<td>${li.slBan}</td>
 								<td>${li.ngayNhap}</td>
+								</tr>
 						 </c:forEach>
 					</tbody>
 					

@@ -9,6 +9,7 @@ import java.util.List;
 
 import model.DonViTinh;
 import model.LoaiHang;
+import model.MatHang;
 import model.SanPham;
 
 
@@ -272,9 +273,10 @@ public static void main(String[] args) throws SQLException {
 //	for (SanPham sanPham : list) {
 //		System.out.println(sanPham);
 //	}
-	DonViTinh donViTinh=new DonViTinhDao().getByKey("VN");
-	LoaiHang lh=new LoaiHangDao().getByKey("H1");
-SanPham pham=new SanPham("sp66", "váy thời trang", 1.2, 2.2, 40, 30, lh, donViTinh);
-dao.insert(pham);
+//	DonViTinh donViTinh=new DonViTinhDao().getByKey("VN");
+//	LoaiHang lh=new LoaiHangDao().getByKey("H1");
+//SanPham pham=new SanPham("sp66", "váy thời trang", 1.2, 2.2, 40, 30, lh, donViTinh);
+//dao.insert(pham);
+System.out.println(dao.getListProductStatistical());
 }
 }
