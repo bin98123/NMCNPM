@@ -16,7 +16,7 @@
 	<form class="formLogin"
 		action="http://localhost:8080/WebProject/LoginServlet" method="get">
 		<div class="imgcontainer">
-			<img src="http://localhost:8080/WebProject/user/img/img_avatar.png"
+			<img src="/user/img/img_avatar.png"
 				alt="Avatar" class="avatar">
 		</div>
 		<div class="containerLogin">

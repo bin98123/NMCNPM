@@ -19,7 +19,7 @@
 <!-- Favicon
 		============================================ -->
 <link rel="shortcut icon" type="image/x-icon"
-	href="http://localhost:8080/WebProject/user/img/favicon.jpg">
+	href="/user/img/favicon.jpg">
 
 <!-- Fonts
 		============================================ -->
@@ -35,79 +35,79 @@
 <!-- Bootstrap CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/bootstrap.min.css">
+	href="/user/css/bootstrap.min.css">
 
 <!-- font-awesome.min CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/font-awesome.min.css">
+	href="/user/css/font-awesome.min.css">
 
 <!-- Mean Menu CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/meanmenu.min.css">
+	href="/user/css/meanmenu.min.css">
 
 <!-- owl.carousel CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/owl.carousel.css">
+	href="/user/css/owl.carousel.css">
 
 <!-- owl.theme CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/owl.theme.css">
+	href="/user/css/owl.theme.css">
 
 <!-- owl.transitions CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/owl.transitions.css">
+	href="/user/css/owl.transitions.css">
 
 <!-- Price Filter CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/jquery-ui.min.css">
+	href="/user/css/jquery-ui.min.css">
 
 <!-- nivo-slider css
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/nivo-slider.css">
+	href="/user/css/nivo-slider.css">
 
 <!-- animate CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/animate.css">
+	href="/user/css/animate.css">
 
 <!-- jquery-ui-slider CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/jquery-ui-slider.css">
+	href="/user/css/jquery-ui-slider.css">
 
 <!-- normalize CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/normalize.css">
+	href="/user/css/normalize.css">
 
 <!-- main CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/main.css">
+	href="/user/css/main.css">
 
 <!-- style CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/style.css">
+	href="/user/style.css">
 
 <!-- responsive CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/responsive.css">
+	href="/user/css/responsive.css">
 
 <script
-	src="http://localhost:8080/WebProject/user/js/vendor/modernizr-2.8.3.min.js"></script>
+	src="/user/js/vendor/modernizr-2.8.3.min.js"></script>
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/login.css">
+	href="/user/css/login.css">
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/user/css/register.css">
+	href="/user/css/register.css">
 
 <style type="text/css">
 li {
@@ -229,7 +229,7 @@ li {
 					<div class="col-md-2 col-sm-2 col-xs-12">
 						<div class="header-logo">
 							<a href="index.jsp"><img
-								src="http://localhost:8080/WebProject/user/img/logo.png"
+								src="/user/img/logo.png"
 								alt="logo"></a>
 						</div>
 					</div>
