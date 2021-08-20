@@ -16,7 +16,7 @@
 	<form class="formLogin"
 		action="http://localhost:8080/WebProject/LoginServlet" method="get">
 		<div class="imgcontainer">
-			<img src="/admin/user/img/img_avatar.png"
+			<img src="/admin/img/img_avatar.png"
 				alt="Avatar" class="avatar">
 		</div>
 		<div class="containerLogin">
@@ -41,9 +41,11 @@
 		</div>
 
 		<div class="containerLogin" style="background-color: #f1f1f1">
-			<a href="http://localhost:8080/WebProject/user/index.jsp"><button type="button" class="cancelbtn">Trở về</button></a> <span
-				class="psw">Quên <a
-				href="http://localhost:8080/WebProject/user/forgotpassword.jsp">mật
+<!-- 			<a href="http://localhost:8080/WebProject/admin/index.jsp"><button type="button" class="cancelbtn">Trở về</button></a> <span -->
+			<a href="index.jsp"><button type="button" class="cancelbtn">Trở về</button></a> <span
+				class="psw">Quên 
+<!-- 				<a href="http://localhost:8080/WebProject/admin/forgotpassword.jsp">mật -->
+				<a href="forgotpassword.jsp">mật
 					khẩu?</a></span>
 		</div>
 	</form>

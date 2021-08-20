@@ -15,7 +15,7 @@
 					<div class="col-md-3 col-sm-12">
 						<div class="footer-info-card">
 							<div class="footer-logo">
-								<a href="index.html"><img src="/admin/user/img/footer-logo.png"
+								<a href="index.html"><img src="/admin/img/footer-logo.png"
 									alt="logo"></a>
 							</div>
 							<p>Lorem ipsum dolor sit amet, coetuer adipiscing elit.
@@ -23,16 +23,16 @@
 								penatibus.</p>
 							<ul class="list-inline">
 								<li><a href="#"><img
-										src="/admin/user/img/visa-card/visa-card-1.png" alt="card"
+										src="/admin/img/visa-card/visa-card-1.png" alt="card"
 										class="img-responsive"></a></li>
 								<li><a href="#"><img
-										src="/admin/user/img/visa-card/visa-card-2.png" alt="card"
+										src="/admin/img/visa-card/visa-card-2.png" alt="card"
 										class="img-responsive"></a></li>
 								<li><a href="#"><img
-										src="/admin/user/img/visa-card/visa-card-3.png" alt="card"
+										src="/admin/img/visa-card/visa-card-3.png" alt="card"
 										class="img-responsive"></a></li>
 								<li><a href="#"><img
-										src="/admin/user/img/visa-card/visa-card-4.png" alt="card"
+										src="/admin/img/visa-card/visa-card-4.png" alt="card"
 										class="img-responsive"></a></li>
 							</ul>
 						</div>
@@ -131,41 +131,41 @@
         
  		<!-- jquery-1.11.3.min js
 		============================================ -->         
-        <script src="/admin/user/js/vendor/jquery-1.11.3.min.js"></script>
+        <script src="/admin/js/vendor/jquery-1.11.3.min.js"></script>
         
  		<!-- bootstrap js
 		============================================ -->         
-        <script src="/admin/user/js/bootstrap.min.js"></script>
+        <script src="/admin/js/bootstrap.min.js"></script>
 		
 		<!-- nivo slider js
 		============================================ --> 
-		<script src="/admin/user/js/jquery.nivo.slider.pack.js"></script>
+		<script src="/admin/js/jquery.nivo.slider.pack.js"></script>
         
  		<!-- Mean Menu js
 		============================================ -->         
-        <script src="/admin/user/js/jquery.meanmenu.min.js"></script>
+        <script src="/admin/js/jquery.meanmenu.min.js"></script>
         
    		<!-- owl.carousel.min js
 		============================================ -->       
-        <script src="/admin/user/js/owl.carousel.min.js"></script>
+        <script src="/admin/js/owl.carousel.min.js"></script>
 		
 		<!-- jquery price slider js
 		============================================ --> 		
-		<script src="/admin/user/js/jquery-price-slider.js"></script>
+		<script src="/admin/js/jquery-price-slider.js"></script>
 		
 		<!-- wow.js
 		============================================ -->
-        <script src="/admin/user/js/wow.js"></script>		
+        <script src="/admin/js/wow.js"></script>		
 		<script>
 			new WOW().init();
 		</script>
         
    		<!-- plugins js
 		============================================ -->         
-        <script src="/admin/user/js/plugins.js"></script>
+        <script src="/admin/js/plugins.js"></script>
 		
    		<!-- main js
 		============================================ -->           
-        <script src="/admin/user/js/main.js"></script>
+        <script src="/admin/js/main.js"></script>
 </body>
 </html>

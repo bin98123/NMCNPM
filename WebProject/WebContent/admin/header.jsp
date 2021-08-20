@@ -19,7 +19,7 @@
 <!-- Favicon
 		============================================ -->
 <link rel="shortcut icon" type="image/x-icon"
-	href="/admin/user/img/favicon.jpg">
+	href="/admin/img/favicon.jpg">
 
 <!-- Fonts
 		============================================ -->
@@ -35,79 +35,79 @@
 <!-- Bootstrap CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/bootstrap.min.css">
+	href="/admin/css/bootstrap.min.css">
 
 <!-- font-awesome.min CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/font-awesome.min.css">
+	href="/admin/css/font-awesome.min.css">
 
 <!-- Mean Menu CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/meanmenu.min.css">
+	href="/admin/css/meanmenu.min.css">
 
 <!-- owl.carousel CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/owl.carousel.css">
+	href="/admin/css/owl.carousel.css">
 
 <!-- owl.theme CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/owl.theme.css">
+	href="/admin/css/owl.theme.css">
 
 <!-- owl.transitions CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/owl.transitions.css">
+	href="/admin/css/owl.transitions.css">
 
 <!-- Price Filter CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/jquery-ui.min.css">
+	href="/admin/css/jquery-ui.min.css">
 
 <!-- nivo-slider css
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/nivo-slider.css">
+	href="/admin/css/nivo-slider.css">
 
 <!-- animate CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/animate.css">
+	href="/admin/css/animate.css">
 
 <!-- jquery-ui-slider CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/jquery-ui-slider.css">
+	href="/admin/css/jquery-ui-slider.css">
 
 <!-- normalize CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/normalize.css">
+	href="/admin/css/normalize.css">
 
 <!-- main CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/main.css">
+	href="/admin/css/main.css">
 
 <!-- style CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/style.css">
+	href="/admin/style.css">
 
 <!-- responsive CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/user/css/responsive.css">
+	href="/admin/css/responsive.css">
 
 <script
-	src="/admin/user/js/vendor/modernizr-2.8.3.min.js"></script>
+	src="/admin/js/vendor/modernizr-2.8.3.min.js"></script>
 <link rel="stylesheet"
-	href="/admin/user/css/login.css">
+	href="/admin/css/login.css">
 <link rel="stylesheet"
-	href="/admin/user/css/register.css">
+	href="/admin/css/register.css">
 
 <style type="text/css">
 li {
@@ -135,8 +135,9 @@ li {
 							<div class="header-top-menu">
 								<ul class="list-inline">
 									<li><img
-										src="http://localhost:8080/WebProject/user/img/vietnam-lag.png"
+										src="/admin/img/vietnam-lag.png"
 										alt="flag"></li>
+<!-- 										src="http://localhost:8080/WebProject/user/img/vietnam-lag.png" -->
 									<li class="dropdown"><a href="#" data-toggle="dropdown">Tiếng
 											việt</a>
 										<ul class="dropdown-menu">
@@ -173,11 +174,13 @@ li {
 					<div class="col-md-8 col-sm-8 col-xs-12">
 						<div class="header-top-right">
 							<ul class="list-inline">
+<!-- 									href="http://localhost:8080/WebProject/admin/login.jsp"><i -->
 								<li><a
-									href="http://localhost:8080/WebProject/admin/login.jsp"><i
+									href="login.jsp"><i
 										class="fa fa-lock"></i>Đăng nhập</a></li>
+<!-- 									href="http://localhost:8080/WebProject/admin/register.jsp"><i -->
 								<li><a
-									href="http://localhost:8080/WebProject/admin/register.jsp"><i
+									href="register.jsp"><i
 										class="fa fa-pencil-square-o"></i>Đăng kí</a></li>
 							</ul>
 						</div>
@@ -192,7 +195,7 @@ li {
 								<!-- 									href="http://localhost:8080/WebProject/user/login.jsp"><i -->
 								<!-- 										class="fa fa-lock"></i>Đăng xuất</a></li> -->
 								<form id="exit"
-									action="http://localhost:8080/WebProject/ManagerServlet"
+									action="/ManagerServlet"
 									method="post">
 									<li onclick="exit.submit();"><input type="hidden"
 										id="exit-btn" value="exit" /><i class="fa fa-lock"></i><a>Đăng
@@ -229,7 +232,7 @@ li {
 					<div class="col-md-2 col-sm-2 col-xs-12">
 						<div class="header-logo">
 							<a href="index.jsp"><img
-								src="/admin/user/img/logo.png"
+								src="/admin/img/logo.png"
 								alt="logo"></a>
 						</div>
 					</div>
@@ -247,8 +250,9 @@ li {
 								</ul>
 							</div>
 							<div class="header-search">
+<!-- 									action="http://localhost:8080/WebProject/ProductServlet?index=1" -->
 								<form
-									action="http://localhost:8080/WebProject/ProductServlet?index=1"
+									action="/ProductServlet?index=1"
 									method="post" id="selectform">
 									<input type="text" placeholder="Tìm Kiếm" name="search" />
 									<button type="submit">
@@ -280,11 +284,13 @@ li {
 					<div class="main-menu hidden-xs">
 						<nav>
 							<ul>
+<!-- 									href="http://localhost:8080/WebProject/admin/index.jsp">Trang -->
 								<li><a
-									href="http://localhost:8080/WebProject/admin/index.jsp">Trang
+									href="index.jsp">Trang
 										Chủ</a></li>
+<!-- 									href="http://localhost:8080/WebProject/admin/SanPham.jsp">Sản Phẩm</a></li> -->
 								<li><a
-									href="http://localhost:8080/WebProject/admin/SanPham.jsp">Sản Phẩm</a></li>
+									href="SanPham.jsp">Sản Phẩm</a></li>
 								<li><a
 									href="http://localhost:8080/WebProject/ProductDemoServlet?productType=aokhoacnam&nhom=men&index=1">Đồ
 										Nam</a></li>
@@ -336,10 +342,11 @@ li {
 					<div class="mobile-menu hidden-sm hidden-md hidden-lg">
 						<nav>
 							<ul>
+<!-- 									href="http://localhost:8080/WebProject/admin/index.jsp">Home</a></li> -->
 								<li><a
-									href="http://localhost:8080/WebProject/user/index.jsp">Home</a></li>
+									href="index.jsp">Home</a></li>
 								<li><a
-									href="http://localhost:8080/WebProject/user/shop.jsp">Shop</a>
+									href="SanPham.jsp">Sản Phẩm</a>
 									<ul>
 										<li><a href="#">Shop Layouts</a>
 											<ul>
