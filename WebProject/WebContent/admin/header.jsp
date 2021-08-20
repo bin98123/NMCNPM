@@ -18,6 +18,17 @@
 <script src="https://kit.fontawesome.com/b10aab807b.js"></script>
 <!-- Favicon
 		============================================ -->
+		<link
+	href="http://localhost:8080/WebProject/admin/vendor/fontawesome-free/css/all.min.css"
+	rel="stylesheet" type="text/css">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link
+	href="http://localhost:8080/WebProject/admin/css/sb-admin-2.min.css"
+	rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon"
 	href="http://localhost:8080/WebProject/admin/img/favicon.jpg">
 

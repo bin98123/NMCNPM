@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
 				user = dao.login(user);
 				System.out.println(user);
 				session.setAttribute("currentSessionUser", user);
-				response.sendRedirect("http://localhost:8080/WebProject/admin/index.jsp"); // logged-in page
+				response.sendRedirect("/SanPham.jsp"); // logged-in page
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
