@@ -19,7 +19,7 @@
 <!-- Favicon
 		============================================ -->
 <link rel="shortcut icon" type="image/x-icon"
-	href="/admin/img/favicon.jpg">
+	href="http://localhost:8080/WebProject/admin/img/favicon.jpg">
 
 <!-- Fonts
 		============================================ -->
@@ -35,79 +35,79 @@
 <!-- Bootstrap CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/bootstrap.min.css">
+	href="http://localhost:8080/WebProject/admin/css/bootstrap.min.css">
 
 <!-- font-awesome.min CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/font-awesome.min.css">
+	href="http://localhost:8080/WebProject/admin/css/font-awesome.min.css">
 
 <!-- Mean Menu CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/meanmenu.min.css">
+	href="http://localhost:8080/WebProject/admin/css/meanmenu.min.css">
 
 <!-- owl.carousel CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/owl.carousel.css">
+	href="http://localhost:8080/WebProject/admin/css/owl.carousel.css">
 
 <!-- owl.theme CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/owl.theme.css">
+	href="http://localhost:8080/WebProject/admin/css/owl.theme.css">
 
 <!-- owl.transitions CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/owl.transitions.css">
+	href="http://localhost:8080/WebProject/admin/css/owl.transitions.css">
 
 <!-- Price Filter CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/jquery-ui.min.css">
+	href="http://localhost:8080/WebProject/admin/css/jquery-ui.min.css">
 
 <!-- nivo-slider css
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/nivo-slider.css">
+	href="http://localhost:8080/WebProject/admin/css/nivo-slider.css">
 
 <!-- animate CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/animate.css">
+	href="http://localhost:8080/WebProject/admin/css/animate.css">
 
 <!-- jquery-ui-slider CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/jquery-ui-slider.css">
+	href="http://localhost:8080/WebProject/admin/css/jquery-ui-slider.css">
 
 <!-- normalize CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/normalize.css">
+	href="http://localhost:8080/WebProject/admin/css/normalize.css">
 
 <!-- main CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/main.css">
+	href="http://localhost:8080/WebProject/admin/css/main.css">
 
 <!-- style CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/style.css">
+	href="http://localhost:8080/WebProject/admin/style.css">
 
 <!-- responsive CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/admin/css/responsive.css">
+	href="http://localhost:8080/WebProject/admin/css/responsive.css">
 
 <script
-	src="/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+	src="http://localhost:8080/WebProject/admin/js/vendor/modernizr-2.8.3.min.js"></script>
 <link rel="stylesheet"
-	href="/admin/css/login.css">
+	href="http://localhost:8080/WebProject/admin/css/login.css">
 <link rel="stylesheet"
-	href="/admin/css/register.css">
+	href="http://localhost:8080/WebProject/admin/css/register.css">
 
 <style type="text/css">
 li {
@@ -135,7 +135,7 @@ li {
 							<div class="header-top-menu">
 								<ul class="list-inline">
 									<li><img
-										src="/admin/img/vietnam-lag.png"
+										src="http://localhost:8080/WebProject/admin/img/vietnam-lag.png"
 										alt="flag"></li>
 <!-- 										src="http://localhost:8080/WebProject/user/img/vietnam-lag.png" -->
 									<li class="dropdown"><a href="#" data-toggle="dropdown">Tiếng
@@ -232,7 +232,7 @@ li {
 					<div class="col-md-2 col-sm-2 col-xs-12">
 						<div class="header-logo">
 							<a href="index.jsp"><img
-								src="/admin/img/logo.png"
+								src="http://localhost:8080/WebProject/admin/img/logo.png"
 								alt="logo"></a>
 						</div>
 					</div>
