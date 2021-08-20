@@ -12,7 +12,7 @@
 <!-- Favicon
 		============================================ -->
 		<link
-	href="http://localhost:8080/WebProject/admin/vendor/fontawesome-free/css/all.min.css"
+	href="/admin/vendor/fontawesome-free/css/all.min.css"
 	rel="stylesheet" type="text/css">
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -20,10 +20,10 @@
 
 <!-- Custom styles for this template-->
 <link
-	href="http://localhost:8080/WebProject/admin/css/sb-admin-2.min.css"
+	href="/admin/css/sb-admin-2.min.css"
 	rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon"
-	href="http://localhost:8080/WebProject/admin/img/favicon.jpg">
+	href="/admin/img/favicon.jpg">
 
 <!-- Fonts
 		============================================ -->
@@ -39,84 +39,84 @@
 <!-- Bootstrap CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/bootstrap.min.css">
+	href="/admin/css/bootstrap.min.css">
 
 <!-- font-awesome.min CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/font-awesome.min.css">
+	href="/admin/css/font-awesome.min.css">
 
 <!-- Mean Menu CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/meanmenu.min.css">
+	href="/admin/css/meanmenu.min.css">
 
 <!-- owl.carousel CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/owl.carousel.css">
+	href="/admin/css/owl.carousel.css">
 
 <!-- owl.theme CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/owl.theme.css">
+	href="/admin/css/owl.theme.css">
 
 <!-- owl.transitions CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/owl.transitions.css">
+	href="/admin/css/owl.transitions.css">
 
 <!-- Price Filter CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/jquery-ui.min.css">
+	href="/admin/css/jquery-ui.min.css">
 
 <!-- nivo-slider css
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/nivo-slider.css">
+	href="/admin/css/nivo-slider.css">
 
 <!-- animate CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/animate.css">
+	href="/admin/css/animate.css">
 
 <!-- jquery-ui-slider CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/jquery-ui-slider.css">
+	href="/admin/css/jquery-ui-slider.css">
 
 <!-- normalize CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/normalize.css">
+	href="/admin/css/normalize.css">
 
 <!-- main CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/main.css">
+	href="/admin/css/main.css">
 
 <!-- style CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/style.css">
+	href="/admin/style.css">
 
 <!-- responsive CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/responsive.css">
+	href="/admin/css/responsive.css">
 
 <script
-	src="http://localhost:8080/WebProject/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+	src="/admin/js/vendor/modernizr-2.8.3.min.js"></script>
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/login.css">
+	href="/admin/css/login.css">
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/register.css">
+	href="/admin/css/register.css">
 
 <title>Thống kê kê sản phẩm</title>
 
 </head>
-
+<jsp:include page="header.jsp"></jsp:include>
 <!-- Begin Page Content -->
 <div class="container-fluid">
 

@@ -131,41 +131,41 @@
         
  		<!-- jquery-1.11.3.min js
 		============================================ -->         
-        <script src="http://localhost:8080/WebProject/admin/js/vendor/jquery-1.11.3.min.js"></script>
+        <script src="/admin/js/vendor/jquery-1.11.3.min.js"></script>
         
  		<!-- bootstrap js
 		============================================ -->         
-        <script src="http://localhost:8080/WebProject/admin/js/bootstrap.min.js"></script>
+        <script src="/admin/js/bootstrap.min.js"></script>
 		
 		<!-- nivo slider js
 		============================================ --> 
-		<script src="http://localhost:8080/WebProject/admin/js/jquery.nivo.slider.pack.js"></script>
+		<script src="/admin/js/jquery.nivo.slider.pack.js"></script>
         
  		<!-- Mean Menu js
 		============================================ -->         
-        <script src="http://localhost:8080/WebProject/admin/js/jquery.meanmenu.min.js"></script>
+        <script src="/admin/js/jquery.meanmenu.min.js"></script>
         
    		<!-- owl.carousel.min js
 		============================================ -->       
-        <script src="http://localhost:8080/WebProject/admin/js/owl.carousel.min.js"></script>
+        <script src="/admin/js/owl.carousel.min.js"></script>
 		
 		<!-- jquery price slider js
 		============================================ --> 		
-		<script src="http://localhost:8080/WebProject/admin/js/jquery-price-slider.js"></script>
+		<script src="/admin/js/jquery-price-slider.js"></script>
 		
 		<!-- wow.js
 		============================================ -->
-        <script src="http://localhost:8080/WebProject/admin/js/wow.js"></script>		
+        <script src="/admin/js/wow.js"></script>		
 		<script>
 			new WOW().init();
 		</script>
         
    		<!-- plugins js
 		============================================ -->         
-        <script src="http://localhost:8080/WebProject/admin/js/plugins.js"></script>
+        <script src="/admin/js/plugins.js"></script>
 		
    		<!-- main js
 		============================================ -->           
-        <script src="http://localhost:8080/WebProject/admin/js/main.js"></script>
+        <script src="/admin/js/main.js"></script>
 </body>
 </html>

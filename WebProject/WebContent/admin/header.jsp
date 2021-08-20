@@ -1,12 +1,8 @@
-<%@page import="model.NhanVien"%>
-<%-- <%@page import="database.CartDao"%> --%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%@	page import="beans.User"%> --%>
-<%-- <%@ page import="beans.Cart"%> --%>
-<%@ page import="model.ThanhVien"%>
-<%-- <%@ page import="beans.CartItem"%> --%>
-<%@ page import="java.util.*"%>
+
+<%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
 
@@ -18,19 +14,8 @@
 <script src="https://kit.fontawesome.com/b10aab807b.js"></script>
 <!-- Favicon
 		============================================ -->
-		<link
-	href="http://localhost:8080/WebProject/admin/vendor/fontawesome-free/css/all.min.css"
-	rel="stylesheet" type="text/css">
-<link
-	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-	rel="stylesheet">
-
-<!-- Custom styles for this template-->
-<link
-	href="http://localhost:8080/WebProject/admin/css/sb-admin-2.min.css"
-	rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon"
-	href="http://localhost:8080/WebProject/admin/img/favicon.jpg">
+	href="/user/img/favicon.jpg">
 
 <!-- Fonts
 		============================================ -->
@@ -46,89 +31,81 @@
 <!-- Bootstrap CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/bootstrap.min.css">
+	href="/user/css/bootstrap.min.css">
 
 <!-- font-awesome.min CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/font-awesome.min.css">
+	href="/user/css/font-awesome.min.css">
 
 <!-- Mean Menu CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/meanmenu.min.css">
+	href="/user/css/meanmenu.min.css">
 
 <!-- owl.carousel CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/owl.carousel.css">
+	href="/user/css/owl.carousel.css">
 
 <!-- owl.theme CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/owl.theme.css">
+	href="/user/css/owl.theme.css">
 
 <!-- owl.transitions CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/owl.transitions.css">
+	href="/user/css/owl.transitions.css">
 
 <!-- Price Filter CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/jquery-ui.min.css">
+	href="/user/css/jquery-ui.min.css">
 
 <!-- nivo-slider css
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/nivo-slider.css">
+	href="/user/css/nivo-slider.css">
 
 <!-- animate CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/animate.css">
+	href="/user/css/animate.css">
 
 <!-- jquery-ui-slider CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/jquery-ui-slider.css">
+	href="/user/css/jquery-ui-slider.css">
 
 <!-- normalize CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/normalize.css">
+	href="/user/css/normalize.css">
 
 <!-- main CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/main.css">
+	href="/user/css/main.css">
 
 <!-- style CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/style.css">
+	href="/user/style.css">
 
 <!-- responsive CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/responsive.css">
+	href="/user/css/responsive.css">
 
 <script
-	src="http://localhost:8080/WebProject/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+	src="/user/js/vendor/modernizr-2.8.3.min.js"></script>
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/login.css">
+	href="/user/css/login.css">
 <link rel="stylesheet"
-	href="http://localhost:8080/WebProject/admin/css/register.css">
-
-<style type="text/css">
-li {
-	cursor: pointer;
-}
-</style>
+	href="/user/css/register.css">
 </head>
-<%
-	ThanhVien currentUser = (NhanVien) (session.getAttribute("currentSessionUser"));
-%>
+
 
 
 <body class="home-one">
@@ -146,9 +123,8 @@ li {
 							<div class="header-top-menu">
 								<ul class="list-inline">
 									<li><img
-										src="http://localhost:8080/WebProject/admin/img/vietnam-lag.png"
+										src="/user/img/vietnam-lag.png"
 										alt="flag"></li>
-<!-- 										src="http://localhost:8080/WebProject/user/img/vietnam-lag.png" -->
 									<li class="dropdown"><a href="#" data-toggle="dropdown">Tiếng
 											việt</a>
 										<ul class="dropdown-menu">
@@ -160,76 +136,52 @@ li {
 									</li>
 								</ul>
 							</div>
-							<%
-								if (currentUser != null) {
-							%>
-							<p>
-								Xin chào
-								<%=currentUser.getHoVaTen()%>!
-							</p>
-							<%
-								}
-
-							else if (currentUser == null) {
-							%>
-							<p>Xin chào Quý Khách!</p>
-							<%
-								}
-							%>
+							<p>Xin chào quý khách!</p>
 						</div>
 					</div>
 
-					<%
-						if (currentUser == null) {
-					%>
+					
 					<div class="col-md-8 col-sm-8 col-xs-12">
 						<div class="header-top-right">
 							<ul class="list-inline">
-<!-- 									href="http://localhost:8080/WebProject/admin/login.jsp"><i -->
 								<li><a
-									href="login.jsp"><i
+									href="http://localhost:8080/WebProject/user/login.jsp"><i
 										class="fa fa-lock"></i>Đăng nhập</a></li>
-<!-- 									href="http://localhost:8080/WebProject/admin/register.jsp"><i -->
 								<li><a
-									href="register.jsp"><i
+									href="http://localhost:8080/WebProject/user/register.jsp"><i
 										class="fa fa-pencil-square-o"></i>Đăng kí</a></li>
 							</ul>
 						</div>
 					</div>
-					<%
-						} else if (currentUser != null) {
-					%>
+				
+					
 					<div class="col-md-8 col-sm-8 col-xs-12">
 						<div class="header-top-right">
 							<ul class="list-inline">
-								<!-- 								<li><a onclick="" -->
-								<!-- 									href="http://localhost:8080/WebProject/user/login.jsp"><i -->
-								<!-- 										class="fa fa-lock"></i>Đăng xuất</a></li> -->
-								<form id="exit"
-									action="/ManagerServlet"
-									method="post">
-									<li onclick="exit.submit();"><input type="hidden"
-										id="exit-btn" value="exit" /><i class="fa fa-lock"></i><a>Đăng
-											xuất</a></li>
-								</form>
-
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-8 col-sm-8 col-xs-12">
-						<div class="header-top-right">
-							<ul class="list-inline">
+								<li><a
+									href="http://localhost:8080/WebProject/user/Account.jsp"><i
+										class="fa fa-user"></i> </a></li>
+								<li><a
+									href="http://localhost:8080/WebProject/WishListController"><i
+										class="fa fa-heart"></i>sản phẩm yêu thích</a></li>
 							</ul>
 						</div>
 					</div>
 
-					<%
-						}
-					%>
+					
 
 					<div class="col-md-8 col-sm-8 col-xs-12">
 						<div class="header-top-right">
 							<ul class="list-inline">
+								<li><a
+									href="http://localhost:8080/WebProject/user/Account.jsp"><i
+										class="fa fa-user"></i> </a></li>
+								<li><a
+									href="http://localhost:8080/WebProject/WishListController"><i
+										class="fa fa-heart"></i>sản phẩm yêu thích</a></li>
+								<li><a
+									href=""><i
+										class="fas fa-user-cog"></i>Admin</a></li>
 							</ul>
 						</div>
 					</div>
@@ -243,7 +195,7 @@ li {
 					<div class="col-md-2 col-sm-2 col-xs-12">
 						<div class="header-logo">
 							<a href="index.jsp"><img
-								src="http://localhost:8080/WebProject/admin/img/logo.png"
+								src="http://localhost:8080/WebProject/user/img/logo.png"
 								alt="logo"></a>
 						</div>
 					</div>
@@ -261,9 +213,8 @@ li {
 								</ul>
 							</div>
 							<div class="header-search">
-<!-- 									action="http://localhost:8080/WebProject/ProductServlet?index=1" -->
 								<form
-									action="/ProductServlet?index=1"
+									action="http://localhost:8080/WebProject/ProductServlet?index=1"
 									method="post" id="selectform">
 									<input type="text" placeholder="Tìm Kiếm" name="search" />
 									<button type="submit">
@@ -278,7 +229,53 @@ li {
 											class="fa fa-cart-arrow-down"></i></a></li>
 									<li class="chart-li"><a
 										href="http://localhost:8080/WebProject/CartController">giỏ
-											hàng</a>
+											hàng</a> <!-- <ul>
+											<li>
+												<div class="header-chart-dropdown">
+													<div class="header-chart-dropdown-list">
+														<div class="dropdown-chart-left floatleft">
+															<a href="#"><img src="img/product/best-product-1.png"
+																alt="list"></a>
+														</div>
+														<div class="dropdown-chart-right">
+															<h2>
+																<a href="#">Feugiat justo lacinia</a>
+															</h2>
+															<h3>Qty: 1</h3>
+															<h4>£80.00</h4>
+														</div>
+													</div>
+													<div class="header-chart-dropdown-list">
+														<div class="dropdown-chart-left floatleft">
+															<a href="#"><img src="img/product/best-product-2.png"
+																alt="list"></a>
+														</div>
+														<div class="dropdown-chart-right">
+															<h2>
+																<a href="#">Aenean eu tristique</a>
+															</h2>
+															<h3>Qty: 1</h3>
+															<h4>£70.00</h4>
+														</div>
+													</div>
+													<div class="chart-checkout">
+														<p>
+															subtotal<span>£150.00</span>
+														</p>
+														<button type="button" class="btn btn-default">Chckout</button>
+													</div>
+												</div>
+											</li>
+										</ul>--></li>
+									
+									<li>
+									
+									</li>
+									
+									<li><a
+										href="http://localhost:8080/WebProject/CartController"> </a></li>
+									
+
 								</ul>
 							</div>
 						</div>
@@ -295,13 +292,12 @@ li {
 					<div class="main-menu hidden-xs">
 						<nav>
 							<ul>
-<!-- 									href="http://localhost:8080/WebProject/admin/index.jsp">Trang -->
 								<li><a
-									href="index.jsp">Trang
+									href="http://localhost:8080/WebProject/user/index.jsp">Trang
 										Chủ</a></li>
-<!-- 									href="http://localhost:8080/WebProject/admin/SanPham.jsp">Sản Phẩm</a></li> -->
 								<li><a
-									href="SanPham.jsp">Sản Phẩm</a></li>
+									href="http://localhost:8080/WebProject/user/shop.jsp">Cửa
+										Hàng</a></li>
 								<li><a
 									href="http://localhost:8080/WebProject/ProductDemoServlet?productType=aokhoacnam&nhom=men&index=1">Đồ
 										Nam</a></li>
@@ -324,7 +320,8 @@ li {
 								<li><a href="#">Trang</a>
 									<ul class="sub-menu">
 										<li><a
-											href="http://localhost:8080/WebProject/admin/SanPham.jsp">Sản Phẩm</a></li>
+											href="http://localhost:8080/WebProject/user/shop.jsp">Cửa
+												Hàng</a></li>
 										<li><a
 											href="http://localhost:8080/WebProject/user/men.jsp">Đồ
 												Nam</a></li>
@@ -343,9 +340,7 @@ li {
 											href="http://localhost:8080/WebProject/user/404.jsp">Error
 												404</a></li>
 									</ul></li>
-								<li><a
-									href="http://localhost:8080/WebProject/user/contact.jsp">Liên
-										Hệ</a></li>
+								<li><a href="http://localhost:8080/WebProject/user/contact.jsp">Liên Hệ</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -353,11 +348,10 @@ li {
 					<div class="mobile-menu hidden-sm hidden-md hidden-lg">
 						<nav>
 							<ul>
-<!-- 									href="http://localhost:8080/WebProject/admin/index.jsp">Home</a></li> -->
 								<li><a
-									href="index.jsp">Home</a></li>
+									href="http://localhost:8080/WebProject/user/index.jsp">Home</a></li>
 								<li><a
-									href="SanPham.jsp">Sản Phẩm</a>
+									href="http://localhost:8080/WebProject/user/shop.jsp">Shop</a>
 									<ul>
 										<li><a href="#">Shop Layouts</a>
 											<ul>
