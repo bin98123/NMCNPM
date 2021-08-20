@@ -19,7 +19,7 @@
 <!-- Favicon
 		============================================ -->
 <link rel="shortcut icon" type="image/x-icon"
-	href="/user/img/favicon.jpg">
+	href="/admin/user/img/favicon.jpg">
 
 <!-- Fonts
 		============================================ -->
@@ -40,74 +40,74 @@
 <!-- font-awesome.min CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/font-awesome.min.css">
+	href="/admin/user/css/font-awesome.min.css">
 
 <!-- Mean Menu CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/meanmenu.min.css">
+	href="/admin/user/css/meanmenu.min.css">
 
 <!-- owl.carousel CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/owl.carousel.css">
+	href="/admin/user/css/owl.carousel.css">
 
 <!-- owl.theme CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/owl.theme.css">
+	href="/admin/user/css/owl.theme.css">
 
 <!-- owl.transitions CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/owl.transitions.css">
+	href="/admin/user/css/owl.transitions.css">
 
 <!-- Price Filter CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/jquery-ui.min.css">
+	href="/admin/user/css/jquery-ui.min.css">
 
 <!-- nivo-slider css
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/nivo-slider.css">
+	href="/admin/user/css/nivo-slider.css">
 
 <!-- animate CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/animate.css">
+	href="/admin/user/css/animate.css">
 
 <!-- jquery-ui-slider CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/jquery-ui-slider.css">
+	href="/admin/user/css/jquery-ui-slider.css">
 
 <!-- normalize CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/normalize.css">
+	href="/admin/user/css/normalize.css">
 
 <!-- main CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/main.css">
+	href="/admin/user/css/main.css">
 
 <!-- style CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/style.css">
+	href="/admin/user/style.css">
 
 <!-- responsive CSS
 		============================================ -->
 <link rel="stylesheet"
-	href="/user/css/responsive.css">
+	href="/admin/user/css/responsive.css">
 
 <script
-	src="/user/js/vendor/modernizr-2.8.3.min.js"></script>
+	src="/admin/user/js/vendor/modernizr-2.8.3.min.js"></script>
 <link rel="stylesheet"
-	href="/user/css/login.css">
+	href="/admin/user/css/login.css">
 <link rel="stylesheet"
-	href="/user/css/register.css">
+	href="/admin/user/css/register.css">
 
 <style type="text/css">
 li {
@@ -229,7 +229,7 @@ li {
 					<div class="col-md-2 col-sm-2 col-xs-12">
 						<div class="header-logo">
 							<a href="index.jsp"><img
-								src="/user/img/logo.png"
+								src="/admin/user/img/logo.png"
 								alt="logo"></a>
 						</div>
 					</div>
